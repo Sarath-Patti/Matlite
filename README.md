@@ -1,84 +1,231 @@
 # Matlite
 
-Matlite is a MATLAB-inspired interpreter written in modern C++20.
+> A MATLAB-inspired interpreter written in modern C++20.
 
-This is Version 0.2. The current release provides the project skeleton, a simple REPL loop, and a standalone lexer. Parser, AST, evaluator, matrix support, runtime behavior, and built-in functions are planned subsystems, but they are not implemented yet.
+Matlite is an educational and extensible interpreter that aims to implement a subset of MATLAB's language features from scratch. The project is designed to explore how interpreters and programming languages work internally, including lexical analysis, parsing, abstract syntax trees, expression evaluation, matrix operations, and script execution.
+
+The long-term goal is to build a clean, modular interpreter that demonstrates compiler and interpreter design principles using modern C++.
+
+---
+
+## Features
+
+### Version 0.1
+- Interactive REPL (Read-Eval-Print Loop)
+- Modern C++20 project structure
+- CMake build system
+- Modular project layout
+
+### Version 0.2
+- Lexical Analyzer (Lexer)
+- Token generation
+- Line and column tracking
+- Support for:
+  - Identifiers
+  - Integer literals
+  - Floating-point literals
+  - Arithmetic operators
+    - `+`
+    - `-`
+    - `*`
+    - `/`
+    - `^`
+    - `=`
+  - Parentheses
+  - Brackets
+  - Comma
+  - Semicolon
+- Unit tests for lexer
+
+---
+
+## Project Architecture
+
+```
+               Source Code
+                     │
+                     ▼
+              Lexical Analysis
+                  (Lexer)
+                     │
+                     ▼
+              Sequence of Tokens
+                     │
+                     ▼
+                  Parser
+                     │
+                     ▼
+          Abstract Syntax Tree
+                     │
+                     ▼
+             Expression Evaluator
+                     │
+                     ▼
+                 Runtime System
+```
+
+Current Progress
+
+```
+REPL
+  │
+  ▼
+Lexer ✅
+
+Parser ⏳
+
+AST ⏳
+
+Interpreter ⏳
+```
+
+---
 
 ## Project Structure
 
-```text
-src/
-    lexer/      Token and lexer implementation.
-    parser/     Future parser implementation.
-    ast/        Future abstract syntax tree nodes.
-    runtime/    Future runtime environment and values.
-    evaluator/  Future AST evaluation logic.
-    matrix/     Future matrix data structures and operations.
-    builtin/    Future built-in functions.
-    main.cpp    Version 0.1 REPL entry point.
-
-include/       Public headers for reusable Matlite components.
-tests/         Automated tests.
-examples/      Example Matlite programs and usage notes.
-docs/          Design notes and project documentation.
+```
+Matlite/
+│
+├── src/
+│   ├── lexer/
+│   ├── parser/
+│   ├── ast/
+│   ├── evaluator/
+│   ├── runtime/
+│   ├── matrix/
+│   ├── builtin/
+│   └── main.cpp
+│
+├── include/
+├── tests/
+├── examples/
+├── docs/
+├── CMakeLists.txt
+└── README.md
 ```
 
-## Build Requirements
+---
 
-- A C++20-capable compiler
-- CMake 3.20 or newer
+## Build Instructions
 
-## Build
+### Clone
 
-From the repository root:
-
-```sh
-cmake -S . -B build
-cmake --build build
+```bash
+git clone https://github.com/Sarath-Patti/Matlite.git
+cd Matlite
 ```
+
+### Configure
+
+```bash
+mkdir build
+cd build
+cmake ..
+```
+
+### Build
+
+```bash
+cmake --build .
+```
+
+---
 
 ## Run
 
-```sh
-./build/matlite
+```bash
+./matlite
 ```
 
-The REPL displays:
+Example
 
-```text
->>
 ```
-
-Type a line and Matlite echoes it back:
-
-```text
 >> hello
 You entered: hello
+
+>> exit
 ```
 
-Type `exit` or `quit` to leave the REPL.
+---
 
-## Test
+## Run Tests
 
-```sh
-ctest --test-dir build
+```bash
+cd build
+ctest --output-on-failure
 ```
 
-## Version 0.2 Scope
+---
 
-Version 0.2 includes:
+## Development Roadmap
 
-- CMake-based C++20 project setup
-- Production-oriented compiler warnings
-- Modular directory layout for future interpreter components
-- A minimal REPL that reads one line at a time
-- Token and lexer classes
-- Lexer unit tests
+- [x] v0.1 Project setup and REPL
+- [x] v0.2 Lexer
+- [ ] v0.3 Recursive Descent Parser
+- [ ] v0.4 Abstract Syntax Tree (AST)
+- [ ] v0.5 Expression Evaluation
+- [ ] v0.6 Variables and Symbol Table
+- [ ] v0.7 Matrix Support
+- [ ] v0.8 Built-in Mathematical Functions
+- [ ] v0.9 Script Execution (.m files)
+- [ ] v1.0 User-defined Functions
+- [ ] v1.1 Plotting Support
+- [ ] v1.2 Error Recovery and Diagnostics
 
-Version 0.2 does not include:
+---
 
-- Parser
-- AST
-- Evaluator
-- Matrix operations
-- Built-in functions
+## Technologies
+
+- C++20
+- CMake
+- GoogleTest
+- Git
+- VS Code
+- OpenAI Codex (development assistant)
+
+---
+
+## Learning Objectives
+
+This project is being built to gain hands-on experience with:
+
+- Compiler construction
+- Interpreter design
+- Lexical analysis
+- Recursive descent parsing
+- Abstract Syntax Trees
+- Symbol tables
+- Runtime environments
+- Matrix computation
+- Modern C++ software architecture
+- Unit testing
+
+---
+
+## Future Work
+
+- MATLAB-style matrix operations
+- Control flow (`if`, `for`, `while`)
+- User-defined functions
+- Built-in numerical library
+- Script execution
+- Error diagnostics
+- Interactive workspace
+- Basic plotting support
+
+---
+
+## License
+
+This project is released under the MIT License.
+
+---
+
+## Author
+
+**Sarath Patti**
+
+M.Tech Computer Science  
+National Institute of Technology Rourkela
+
+GitHub: https://github.com/Sarath-Patti
