@@ -1,0 +1,3 @@
+/Users/sarathpatti/Matlite/build/CMakeFiles/matlite.dir
+/Users/sarathpatti/Matlite/build/CMakeFiles/edit_cache.dir
+/Users/sarathpatti/Matlite/build/CMakeFiles/rebuild_cache.dir
