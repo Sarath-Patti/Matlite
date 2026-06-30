@@ -1,3 +1,6 @@
+/Users/sarathpatti/Matlite/build/CMakeFiles/matlite_lexer.dir
 /Users/sarathpatti/Matlite/build/CMakeFiles/matlite.dir
+/Users/sarathpatti/Matlite/build/CMakeFiles/matlite_lexer_tests.dir
+/Users/sarathpatti/Matlite/build/CMakeFiles/test.dir
 /Users/sarathpatti/Matlite/build/CMakeFiles/edit_cache.dir
 /Users/sarathpatti/Matlite/build/CMakeFiles/rebuild_cache.dir

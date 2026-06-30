@@ -2,13 +2,13 @@
 
 Matlite is a MATLAB-inspired interpreter written in modern C++20.
 
-This is Version 0.1. The current release intentionally provides only the project skeleton and a simple REPL loop. Lexer, parser, AST, evaluator, matrix support, runtime behavior, and built-in functions are planned subsystems, but they are not implemented yet.
+This is Version 0.2. The current release provides the project skeleton, a simple REPL loop, and a standalone lexer. Parser, AST, evaluator, matrix support, runtime behavior, and built-in functions are planned subsystems, but they are not implemented yet.
 
 ## Project Structure
 
 ```text
 src/
-    lexer/      Future lexical analysis implementation.
+    lexer/      Token and lexer implementation.
     parser/     Future parser implementation.
     ast/        Future abstract syntax tree nodes.
     runtime/    Future runtime environment and values.
@@ -58,21 +58,27 @@ You entered: hello
 
 Type `exit` or `quit` to leave the REPL.
 
-## Version 0.1 Scope
+## Test
 
-Version 0.1 includes:
+```sh
+ctest --test-dir build
+```
+
+## Version 0.2 Scope
+
+Version 0.2 includes:
 
 - CMake-based C++20 project setup
 - Production-oriented compiler warnings
 - Modular directory layout for future interpreter components
 - A minimal REPL that reads one line at a time
+- Token and lexer classes
+- Lexer unit tests
 
-Version 0.1 does not include:
+Version 0.2 does not include:
 
-- Lexer
 - Parser
 - AST
 - Evaluator
 - Matrix operations
 - Built-in functions
-

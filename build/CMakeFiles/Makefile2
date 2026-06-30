@@ -63,11 +63,15 @@ CMAKE_BINARY_DIR = /Users/sarathpatti/Matlite/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/matlite_lexer.dir/all
 all: CMakeFiles/matlite.dir/all
+all: CMakeFiles/matlite_lexer_tests.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/matlite_lexer.dir/codegen
 codegen: CMakeFiles/matlite.dir/codegen
+codegen: CMakeFiles/matlite_lexer_tests.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,8 +79,42 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/matlite_lexer.dir/clean
 clean: CMakeFiles/matlite.dir/clean
+clean: CMakeFiles/matlite_lexer_tests.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/matlite_lexer.dir
+
+# All Build rule for target.
+CMakeFiles/matlite_lexer.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/sarathpatti/Matlite/build/CMakeFiles --progress-num=3,4,5 "Built target matlite_lexer"
+.PHONY : CMakeFiles/matlite_lexer.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/matlite_lexer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarathpatti/Matlite/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/matlite_lexer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarathpatti/Matlite/build/CMakeFiles 0
+.PHONY : CMakeFiles/matlite_lexer.dir/rule
+
+# Convenience name for target.
+matlite_lexer: CMakeFiles/matlite_lexer.dir/rule
+.PHONY : matlite_lexer
+
+# codegen rule for target.
+CMakeFiles/matlite_lexer.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/sarathpatti/Matlite/build/CMakeFiles --progress-num=3,4,5 "Finished codegen for target matlite_lexer"
+.PHONY : CMakeFiles/matlite_lexer.dir/codegen
+
+# clean rule for target.
+CMakeFiles/matlite_lexer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/clean
+.PHONY : CMakeFiles/matlite_lexer.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/matlite.dir
@@ -109,6 +147,38 @@ CMakeFiles/matlite.dir/codegen:
 CMakeFiles/matlite.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite.dir/build.make CMakeFiles/matlite.dir/clean
 .PHONY : CMakeFiles/matlite.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/matlite_lexer_tests.dir
+
+# All Build rule for target.
+CMakeFiles/matlite_lexer_tests.dir/all: CMakeFiles/matlite_lexer.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/sarathpatti/Matlite/build/CMakeFiles --progress-num=6,7 "Built target matlite_lexer_tests"
+.PHONY : CMakeFiles/matlite_lexer_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/matlite_lexer_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarathpatti/Matlite/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/matlite_lexer_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sarathpatti/Matlite/build/CMakeFiles 0
+.PHONY : CMakeFiles/matlite_lexer_tests.dir/rule
+
+# Convenience name for target.
+matlite_lexer_tests: CMakeFiles/matlite_lexer_tests.dir/rule
+.PHONY : matlite_lexer_tests
+
+# codegen rule for target.
+CMakeFiles/matlite_lexer_tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/sarathpatti/Matlite/build/CMakeFiles --progress-num=6,7 "Finished codegen for target matlite_lexer_tests"
+.PHONY : CMakeFiles/matlite_lexer_tests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/matlite_lexer_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/clean
+.PHONY : CMakeFiles/matlite_lexer_tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

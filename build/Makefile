@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/sarathpatti/Matlite/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -117,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named matlite_lexer
+
+# Build rule for target.
+matlite_lexer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matlite_lexer
+.PHONY : matlite_lexer
+
+# fast build rule for target.
+matlite_lexer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/build
+.PHONY : matlite_lexer/fast
+
+#=============================================================================
 # Target rules for targets named matlite
 
 # Build rule for target.
@@ -128,6 +151,67 @@ matlite: cmake_check_build_system
 matlite/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite.dir/build.make CMakeFiles/matlite.dir/build
 .PHONY : matlite/fast
+
+#=============================================================================
+# Target rules for targets named matlite_lexer_tests
+
+# Build rule for target.
+matlite_lexer_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matlite_lexer_tests
+.PHONY : matlite_lexer_tests
+
+# fast build rule for target.
+matlite_lexer_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/build
+.PHONY : matlite_lexer_tests/fast
+
+src/lexer/Lexer.o: src/lexer/Lexer.cpp.o
+.PHONY : src/lexer/Lexer.o
+
+# target to build an object file
+src/lexer/Lexer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/src/lexer/Lexer.cpp.o
+.PHONY : src/lexer/Lexer.cpp.o
+
+src/lexer/Lexer.i: src/lexer/Lexer.cpp.i
+.PHONY : src/lexer/Lexer.i
+
+# target to preprocess a source file
+src/lexer/Lexer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/src/lexer/Lexer.cpp.i
+.PHONY : src/lexer/Lexer.cpp.i
+
+src/lexer/Lexer.s: src/lexer/Lexer.cpp.s
+.PHONY : src/lexer/Lexer.s
+
+# target to generate assembly for a file
+src/lexer/Lexer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/src/lexer/Lexer.cpp.s
+.PHONY : src/lexer/Lexer.cpp.s
+
+src/lexer/Token.o: src/lexer/Token.cpp.o
+.PHONY : src/lexer/Token.o
+
+# target to build an object file
+src/lexer/Token.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/src/lexer/Token.cpp.o
+.PHONY : src/lexer/Token.cpp.o
+
+src/lexer/Token.i: src/lexer/Token.cpp.i
+.PHONY : src/lexer/Token.i
+
+# target to preprocess a source file
+src/lexer/Token.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/src/lexer/Token.cpp.i
+.PHONY : src/lexer/Token.cpp.i
+
+src/lexer/Token.s: src/lexer/Token.cpp.s
+.PHONY : src/lexer/Token.s
+
+# target to generate assembly for a file
+src/lexer/Token.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer.dir/build.make CMakeFiles/matlite_lexer.dir/src/lexer/Token.cpp.s
+.PHONY : src/lexer/Token.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -153,6 +237,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite.dir/build.make CMakeFiles/matlite.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+tests/lexer_tests.o: tests/lexer_tests.cpp.o
+.PHONY : tests/lexer_tests.o
+
+# target to build an object file
+tests/lexer_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/tests/lexer_tests.cpp.o
+.PHONY : tests/lexer_tests.cpp.o
+
+tests/lexer_tests.i: tests/lexer_tests.cpp.i
+.PHONY : tests/lexer_tests.i
+
+# target to preprocess a source file
+tests/lexer_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/tests/lexer_tests.cpp.i
+.PHONY : tests/lexer_tests.cpp.i
+
+tests/lexer_tests.s: tests/lexer_tests.cpp.s
+.PHONY : tests/lexer_tests.s
+
+# target to generate assembly for a file
+tests/lexer_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/tests/lexer_tests.cpp.s
+.PHONY : tests/lexer_tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +269,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... matlite"
+	@echo "... matlite_lexer"
+	@echo "... matlite_lexer_tests"
+	@echo "... src/lexer/Lexer.o"
+	@echo "... src/lexer/Lexer.i"
+	@echo "... src/lexer/Lexer.s"
+	@echo "... src/lexer/Token.o"
+	@echo "... src/lexer/Token.i"
+	@echo "... src/lexer/Token.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... tests/lexer_tests.o"
+	@echo "... tests/lexer_tests.i"
+	@echo "... tests/lexer_tests.s"
 .PHONY : help
 
 

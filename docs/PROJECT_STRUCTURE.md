@@ -1,9 +1,9 @@
 # Project Structure
 
 Matlite is organized around the major subsystems expected in an interpreter.
-Version 0.1 creates the structure without implementing those subsystems.
+Version 0.2 implements the lexer and keeps later interpreter phases as placeholders.
 
-- `src/lexer`: future tokenization code.
+- `src/lexer`: token definitions and source tokenization.
 - `src/parser`: future syntax parsing code.
 - `src/ast`: future abstract syntax tree types.
 - `src/runtime`: future runtime values, scopes, and execution state.
@@ -14,4 +14,3 @@ Version 0.1 creates the structure without implementing those subsystems.
 - `tests`: future automated tests.
 - `examples`: future Matlite scripts and usage examples.
 - `docs`: design and development documentation.
-
