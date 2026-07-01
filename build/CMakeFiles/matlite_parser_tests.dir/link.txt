@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/matlite_parser_tests.dir/tests/parser_tests.cpp.o -o matlite_parser_tests  libmatlite_parser.a libmatlite_ast.a libmatlite_lexer.a

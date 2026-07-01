@@ -1,44 +1,38 @@
 #pragma once
 
-#include <cstddef>
 #include <string>
+#include <utility>
 
 namespace matlite::lexer {
 
-enum class TokenType
-{
-    // Literals
+enum class TokenType {
     Identifier,
     Integer,
     Float,
-
-    // Operators
     Plus,
     Minus,
     Multiply,
     Divide,
     Power,
     Assign,
-
-    // Delimiters
     LeftParen,
     RightParen,
     LeftBracket,
     RightBracket,
     Comma,
     Semicolon,
-
-    // Special
     EndOfFile,
     Invalid
 };
 
-struct Token
-{
+class Token {
+public:
+    Token(TokenType type, std::string lexeme, int line, int column);
+
     TokenType type;
     std::string lexeme;
-    std::size_t line;
-    std::size_t column;
+    int line;
+    int column;
 };
 
 } // namespace matlite::lexer

@@ -140,6 +140,32 @@ matlite_lexer/fast:
 .PHONY : matlite_lexer/fast
 
 #=============================================================================
+# Target rules for targets named matlite_ast
+
+# Build rule for target.
+matlite_ast: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matlite_ast
+.PHONY : matlite_ast
+
+# fast build rule for target.
+matlite_ast/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_ast.dir/build.make CMakeFiles/matlite_ast.dir/build
+.PHONY : matlite_ast/fast
+
+#=============================================================================
+# Target rules for targets named matlite_parser
+
+# Build rule for target.
+matlite_parser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matlite_parser
+.PHONY : matlite_parser
+
+# fast build rule for target.
+matlite_parser/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_parser.dir/build.make CMakeFiles/matlite_parser.dir/build
+.PHONY : matlite_parser/fast
+
+#=============================================================================
 # Target rules for targets named matlite
 
 # Build rule for target.
@@ -164,6 +190,43 @@ matlite_lexer_tests: cmake_check_build_system
 matlite_lexer_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/build
 .PHONY : matlite_lexer_tests/fast
+
+#=============================================================================
+# Target rules for targets named matlite_parser_tests
+
+# Build rule for target.
+matlite_parser_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matlite_parser_tests
+.PHONY : matlite_parser_tests
+
+# fast build rule for target.
+matlite_parser_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_parser_tests.dir/build.make CMakeFiles/matlite_parser_tests.dir/build
+.PHONY : matlite_parser_tests/fast
+
+src/ast/Expression.o: src/ast/Expression.cpp.o
+.PHONY : src/ast/Expression.o
+
+# target to build an object file
+src/ast/Expression.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_ast.dir/build.make CMakeFiles/matlite_ast.dir/src/ast/Expression.cpp.o
+.PHONY : src/ast/Expression.cpp.o
+
+src/ast/Expression.i: src/ast/Expression.cpp.i
+.PHONY : src/ast/Expression.i
+
+# target to preprocess a source file
+src/ast/Expression.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_ast.dir/build.make CMakeFiles/matlite_ast.dir/src/ast/Expression.cpp.i
+.PHONY : src/ast/Expression.cpp.i
+
+src/ast/Expression.s: src/ast/Expression.cpp.s
+.PHONY : src/ast/Expression.s
+
+# target to generate assembly for a file
+src/ast/Expression.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_ast.dir/build.make CMakeFiles/matlite_ast.dir/src/ast/Expression.cpp.s
+.PHONY : src/ast/Expression.cpp.s
 
 src/lexer/Lexer.o: src/lexer/Lexer.cpp.o
 .PHONY : src/lexer/Lexer.o
@@ -237,6 +300,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite.dir/build.make CMakeFiles/matlite.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/parser/Parser.o: src/parser/Parser.cpp.o
+.PHONY : src/parser/Parser.o
+
+# target to build an object file
+src/parser/Parser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_parser.dir/build.make CMakeFiles/matlite_parser.dir/src/parser/Parser.cpp.o
+.PHONY : src/parser/Parser.cpp.o
+
+src/parser/Parser.i: src/parser/Parser.cpp.i
+.PHONY : src/parser/Parser.i
+
+# target to preprocess a source file
+src/parser/Parser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_parser.dir/build.make CMakeFiles/matlite_parser.dir/src/parser/Parser.cpp.i
+.PHONY : src/parser/Parser.cpp.i
+
+src/parser/Parser.s: src/parser/Parser.cpp.s
+.PHONY : src/parser/Parser.s
+
+# target to generate assembly for a file
+src/parser/Parser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_parser.dir/build.make CMakeFiles/matlite_parser.dir/src/parser/Parser.cpp.s
+.PHONY : src/parser/Parser.cpp.s
+
 tests/lexer_tests.o: tests/lexer_tests.cpp.o
 .PHONY : tests/lexer_tests.o
 
@@ -261,6 +348,30 @@ tests/lexer_tests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_lexer_tests.dir/build.make CMakeFiles/matlite_lexer_tests.dir/tests/lexer_tests.cpp.s
 .PHONY : tests/lexer_tests.cpp.s
 
+tests/parser_tests.o: tests/parser_tests.cpp.o
+.PHONY : tests/parser_tests.o
+
+# target to build an object file
+tests/parser_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_parser_tests.dir/build.make CMakeFiles/matlite_parser_tests.dir/tests/parser_tests.cpp.o
+.PHONY : tests/parser_tests.cpp.o
+
+tests/parser_tests.i: tests/parser_tests.cpp.i
+.PHONY : tests/parser_tests.i
+
+# target to preprocess a source file
+tests/parser_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_parser_tests.dir/build.make CMakeFiles/matlite_parser_tests.dir/tests/parser_tests.cpp.i
+.PHONY : tests/parser_tests.cpp.i
+
+tests/parser_tests.s: tests/parser_tests.cpp.s
+.PHONY : tests/parser_tests.s
+
+# target to generate assembly for a file
+tests/parser_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matlite_parser_tests.dir/build.make CMakeFiles/matlite_parser_tests.dir/tests/parser_tests.cpp.s
+.PHONY : tests/parser_tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -271,8 +382,14 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... matlite"
+	@echo "... matlite_ast"
 	@echo "... matlite_lexer"
 	@echo "... matlite_lexer_tests"
+	@echo "... matlite_parser"
+	@echo "... matlite_parser_tests"
+	@echo "... src/ast/Expression.o"
+	@echo "... src/ast/Expression.i"
+	@echo "... src/ast/Expression.s"
 	@echo "... src/lexer/Lexer.o"
 	@echo "... src/lexer/Lexer.i"
 	@echo "... src/lexer/Lexer.s"
@@ -282,9 +399,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/parser/Parser.o"
+	@echo "... src/parser/Parser.i"
+	@echo "... src/parser/Parser.s"
 	@echo "... tests/lexer_tests.o"
 	@echo "... tests/lexer_tests.i"
 	@echo "... tests/lexer_tests.s"
+	@echo "... tests/parser_tests.o"
+	@echo "... tests/parser_tests.i"
+	@echo "... tests/parser_tests.s"
 .PHONY : help
 
 

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 project(
     Matlite
-    VERSION 0.2.0
+    VERSION 0.3.0
     DESCRIPTION "A MATLAB-inspired interpreter"
     LANGUAGES CXX
 )
@@ -33,6 +33,53 @@ set_target_properties(matlite_lexer PROPERTIES
 )
 
 matlite_enable_warnings(matlite_lexer)
+
+add_library(matlite_ast
+    src/ast/Expression.cpp
+)
+
+target_compile_features(matlite_ast PUBLIC cxx_std_20)
+
+target_include_directories(matlite_ast
+    PUBLIC
+        ${PROJECT_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/include
+)
+
+target_link_libraries(matlite_ast
+    PUBLIC
+        matlite_lexer
+)
+
+set_target_properties(matlite_ast PROPERTIES
+    CXX_EXTENSIONS OFF
+)
+
+matlite_enable_warnings(matlite_ast)
+
+add_library(matlite_parser
+    src/parser/Parser.cpp
+)
+
+target_compile_features(matlite_parser PUBLIC cxx_std_20)
+
+target_include_directories(matlite_parser
+    PUBLIC
+        ${PROJECT_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/include
+)
+
+target_link_libraries(matlite_parser
+    PUBLIC
+        matlite_ast
+        matlite_lexer
+)
+
+set_target_properties(matlite_parser PROPERTIES
+    CXX_EXTENSIONS OFF
+)
+
+matlite_enable_warnings(matlite_parser)
 
 add_executable(matlite
     src/main.cpp
@@ -71,3 +118,22 @@ set_target_properties(matlite_lexer_tests PROPERTIES
 matlite_enable_warnings(matlite_lexer_tests)
 
 add_test(NAME lexer_tests COMMAND matlite_lexer_tests)
+
+add_executable(matlite_parser_tests
+    tests/parser_tests.cpp
+)
+
+target_link_libraries(matlite_parser_tests
+    PRIVATE
+        matlite_parser
+)
+
+target_compile_features(matlite_parser_tests PRIVATE cxx_std_20)
+
+set_target_properties(matlite_parser_tests PROPERTIES
+    CXX_EXTENSIONS OFF
+)
+
+matlite_enable_warnings(matlite_parser_tests)
+
+add_test(NAME parser_tests COMMAND matlite_parser_tests)

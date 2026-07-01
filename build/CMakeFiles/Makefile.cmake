@@ -49,6 +49,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/matlite_lexer.dir/DependInfo.cmake"
+  "CMakeFiles/matlite_ast.dir/DependInfo.cmake"
+  "CMakeFiles/matlite_parser.dir/DependInfo.cmake"
   "CMakeFiles/matlite.dir/DependInfo.cmake"
   "CMakeFiles/matlite_lexer_tests.dir/DependInfo.cmake"
+  "CMakeFiles/matlite_parser_tests.dir/DependInfo.cmake"
   )

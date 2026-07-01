@@ -37,6 +37,18 @@ The long-term goal is to build a clean, modular interpreter that demonstrates co
   - Semicolon
 - Unit tests for lexer
 
+### Version 0.3
+- Recursive descent parser
+- Abstract Syntax Tree (AST)
+- Expression parsing with operator precedence
+- Support for:
+  - Assignment expressions
+  - Binary expressions
+  - Literal expressions
+  - Identifier expressions
+  - Parenthesized expressions
+- Unit tests for parser
+
 ---
 
 ## Project Architecture
@@ -72,9 +84,9 @@ REPL
   ▼
 Lexer ✅
 
-Parser ⏳
+Parser ✅
 
-AST ⏳
+AST ✅
 
 Interpreter ⏳
 ```
@@ -161,16 +173,15 @@ ctest --output-on-failure
 
 - [x] v0.1 Project setup and REPL
 - [x] v0.2 Lexer
-- [ ] v0.3 Recursive Descent Parser
-- [ ] v0.4 Abstract Syntax Tree (AST)
-- [ ] v0.5 Expression Evaluation
-- [ ] v0.6 Variables and Symbol Table
-- [ ] v0.7 Matrix Support
-- [ ] v0.8 Built-in Mathematical Functions
-- [ ] v0.9 Script Execution (.m files)
-- [ ] v1.0 User-defined Functions
-- [ ] v1.1 Plotting Support
-- [ ] v1.2 Error Recovery and Diagnostics
+- [x] v0.3 Recursive Descent Parser and AST
+- [ ] v0.4 Expression Evaluation
+- [ ] v0.5 Variables and Symbol Table
+- [ ] v0.6 Matrix Support
+- [ ] v0.7 Built-in Mathematical Functions
+- [ ] v0.8 Script Execution (.m files)
+- [ ] v0.9 User-defined Functions
+- [ ] v1.0 Plotting Support
+- [ ] v1.1 Error Recovery and Diagnostics
 
 ---
 

@@ -1,2 +1,3 @@
-lexer_tests 3 0.00203771
+lexer_tests 6 0.00149833
+parser_tests 3 0.00127514
 ---

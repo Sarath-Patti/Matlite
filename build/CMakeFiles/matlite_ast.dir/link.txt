@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmatlite_ast.a CMakeFiles/matlite_ast.dir/src/ast/Expression.cpp.o
+/usr/bin/ranlib libmatlite_ast.a

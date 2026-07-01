@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmatlite_parser.a CMakeFiles/matlite_parser.dir/src/parser/Parser.cpp.o
+/usr/bin/ranlib libmatlite_parser.a

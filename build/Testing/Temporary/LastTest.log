@@ -1,18 +1,33 @@
-Start testing: Jun 30 17:45 IST
+Start testing: Jul 01 14:24 IST
 ----------------------------------------------------------
-1/1 Testing: lexer_tests
-1/1 Test: lexer_tests
+1/2 Testing: lexer_tests
+1/2 Test: lexer_tests
 Command: "/Users/sarathpatti/Matlite/build/matlite_lexer_tests"
 Directory: /Users/sarathpatti/Matlite/build
-"lexer_tests" start time: Jun 30 17:45 IST
+"lexer_tests" start time: Jul 01 14:24 IST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"lexer_tests" end time: Jun 30 17:45 IST
+"lexer_tests" end time: Jul 01 14:24 IST
 "lexer_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 30 17:45 IST
+2/2 Testing: parser_tests
+2/2 Test: parser_tests
+Command: "/Users/sarathpatti/Matlite/build/matlite_parser_tests"
+Directory: /Users/sarathpatti/Matlite/build
+"parser_tests" start time: Jul 01 14:24 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"parser_tests" end time: Jul 01 14:24 IST
+"parser_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 01 14:24 IST
