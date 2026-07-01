@@ -55,6 +55,21 @@ The project emphasizes clean software architecture, modular design, and producti
 
 ---
 
+## ✅ Version 0.4
+### Expression Evaluator
+- Arithmetic expression evaluation
+- Supports:
+  - Addition
+  - Subtraction
+  - Multiplication
+  - Division
+  - Exponentiation
+- Evaluates AST produced by the parser
+- Throws clear runtime errors for identifiers and assignments until variables are implemented
+- Unit tests for evaluator
+
+---
+
 # Compiler Frontend Architecture
 
 ```
@@ -96,7 +111,7 @@ Parser                   ✅
 
 Abstract Syntax Tree     ✅
 
-Expression Evaluator     ⏳
+Expression Evaluator     ✅
 
 Symbol Table             ⏳
 
@@ -200,7 +215,7 @@ ctest --output-on-failure
 
 ## Phase 2 — Interpreter
 
-- [ ] v0.4 Expression Evaluator
+- [x] v0.4 Expression Evaluator
 - [ ] v0.5 Symbol Table
 - [ ] v0.6 Variables
 - [ ] v0.7 Built-in Mathematical Functions

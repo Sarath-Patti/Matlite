@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmatlite_lexer.a CMakeFiles/matlite_lexer.dir/src/lexer/Lexer.cpp.o CMakeFiles/matlite_lexer.dir/src/lexer/Token.cpp.o
-/usr/bin/ranlib libmatlite_lexer.a

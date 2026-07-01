@@ -1,0 +1,34 @@
+# Build directory
+build/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+
+# Testing
+Testing/
+
+# Static and shared libraries
+*.a
+*.so
+*.dylib
+*.dll
+
+# Object files
+*.o
+*.obj
+*.d
+
+# Executables
+matlite
+*_tests
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/settings.json
